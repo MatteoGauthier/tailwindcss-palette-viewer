@@ -29,7 +29,11 @@ class MyDocument extends Document {
 						content="@MatteoGauthier_"
 					/>
 					<meta
-						property="twitter:description"
+					name="description"
+						content="TailwindCSS Palette viewer, click to copy class name ! Full Tailwind palette (with cyan, rose, emerald)"
+					/>
+                    <meta
+						property="description"
 						content="TailwindCSS Palette viewer, click to copy class name ! Full Tailwind palette (with cyan, rose, emerald)"
 					/>
 					<meta property="twitter:image" content="https://tailwind-palette.vercel.app/og-image.png" />

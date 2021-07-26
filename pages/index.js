@@ -26,7 +26,7 @@ export default function Home() {
 		<>
 			<Head>
 				<title>
-					TailwindCSS color palette viewer, click to copy class name ! Full Tailwind palette (with cyan, rose, emerald)
+					TailwindCSS color palette viewer, click to copy class name !
 				</title>
 			</Head>
 			<Toaster />
@@ -36,7 +36,7 @@ export default function Home() {
 						<h1 className="text-3xl font-bold tracking-tight dark:text-white text-cool-gray-900 ">
 							TailwindCSS full palette{" "}
 						</h1>
-						<p className="text-gray-400">Click to copy the css class ✨</p>
+						<h2 className="text-gray-400">Click to copy the css class ✨</h2>
 					</div>
 					<a href="https://github.com/MatteoGauthier/full-palette">
 						<code className="px-2 py-1 text-sm text-gray-800 bg-gray-100 rounded-md">full-palette@1.2.0</code>
