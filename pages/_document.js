@@ -65,7 +65,7 @@ class MyDocument extends Document {
 							  "@context": "https://schema.org/",
 							  "@type": "WebSite",
 							  "name": "Bookmarks",
-							  "url": "https://tailwind-palette.vercel.app/",
+							  "url": "https://tailwind-palette.vercel.app/"
 				
 							}
     `,
