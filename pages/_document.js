@@ -10,15 +10,15 @@ class MyDocument extends Document {
 					<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
 					<link rel="manifest" href="/site.webmanifest" />
 					<meta name="msapplication-config" content="/browserconfig.xml" />
-					<meta name="msapplication-TileColor" content="#000" />
-					<meta name="theme-color" content="#000" />
+					<meta name="msapplication-TileColor" content="#FFFFFF" />
+					<meta name="theme-color" content="#FFFFFF" />
 					<link rel="preconnect" href="https://fonts.gstatic.com" />
-					<link rel="canonical" href="https://bookmarks.squale.agency" />
+					<link rel="canonical" href="https://tailwind-palette.vercel.app/" />
 					<meta property="twitter:card" content="summary" />
-					<meta property="twitter:url" content="https://bookmarks.squale.agency/" />
+					<meta property="twitter:url" content="https://tailwind-palette.vercel.app/" />
 					<meta
 						property="twitter:title"
-						content="Bookmarks - squale.agency - Liste d'outils et ressources de qualités en développement, design, etc..."
+						content="TailwindCSS Palette viewer, click to copy class name ! Full Tailwind palette (with cyan, rose, emerald)"
 					/>
 					<meta
 						property="twitter:site"
@@ -30,9 +30,9 @@ class MyDocument extends Document {
 					/>
 					<meta
 						property="twitter:description"
-						content="bookmarks est une base de donnée des outils favoris de squale.agency, chacun des outils sont regroupés par catégories, vous pouvez filtrer les résultats ou chercher un outil avec un mot clé."
+						content="TailwindCSS Palette viewer, click to copy class name ! Full Tailwind palette (with cyan, rose, emerald)"
 					/>
-					<meta property="twitter:image" content="https://bookmarks.squale.agency/apple-touch-icon.png" />
+					<meta property="twitter:image" content="https://tailwind-palette.vercel.app/og-image.png" />
 					<meta
 						name="keywords"
 						content="tailwind, css, tailwindcss, Mattèo Gauthier, Candice Fradet, squale.agency, dev, nodejs, postcss"
@@ -56,17 +56,12 @@ class MyDocument extends Document {
 							  "@context": "https://schema.org/",
 							  "@type": "WebSite",
 							  "name": "Bookmarks",
-							  "url": "https://bookmarks.squale.agency",
-							  "potentialAction": {
-								"@type": "SearchAction",
-								"target": "https://bookmarks.squale.agency/?q={search_term_string}",
-								"query-input": "required name=search_term_string"
-							  }
+							  "url": "https://tailwind-palette.vercel.app/",
+				
 							}
     `,
 						}}
 					></script>
-					<link rel="search" href="/opensearch.xml" type="application/opensearchdescription+xml" title="Bookmarks search"/>
 
 				</Head>
 				<body className="transition-colors duration-200 bg-white dark:bg-black">

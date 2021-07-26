@@ -18,18 +18,24 @@ const notify = (text) =>
 	);
 
 export default function Home() {
-	console.log(colors);
 	function copyToClipboard(text) {
 		// copy(text);
 		notify(text);
 	}
 	return (
 		<>
+			<Head>
+				<title>
+					TailwindCSS color palette viewer, click to copy class name ! Full Tailwind palette (with cyan, rose, emerald)
+				</title>
+			</Head>
 			<Toaster />
 			<div className="p-6">
 				<header className="flex justify-between mb-7 cetner items-center">
 					<div className="flex items-end  space-x-2">
-						<h1 className="text-3xl font-bold tracking-tight text-cool-gray-900 ">TailwindCSS full palette </h1>
+						<h1 className="text-3xl font-bold dark:text-white tracking-tight text-cool-gray-900 ">
+							TailwindCSS full palette{" "}
+						</h1>
 						<p className="text-gray-400">Click to copy the css class ✨</p>
 					</div>
 					<a href="https://github.com/MatteoGauthier/full-palette">
@@ -68,8 +74,14 @@ export default function Home() {
 					})}
 				</main>
 				<footer className="text-left my-8 text-cool-gray-500">
-					Made with love by <a className="text-cyan-500 font-medium "  href="https://matteogauthier.fr">Mattèo Gauthier</a> from{" "}
-					<a  className="text-cyan-500  font-medium " href="https://squale.agency">squale.agency</a>
+					Made with love by{" "}
+					<a className="text-cyan-500 font-medium " href="https://matteogauthier.fr">
+						Mattèo Gauthier
+					</a>{" "}
+					from{" "}
+					<a className="text-cyan-500  font-medium " href="https://squale.agency">
+						squale.agency
+					</a>
 				</footer>
 			</div>
 		</>
