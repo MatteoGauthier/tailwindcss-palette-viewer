@@ -12,27 +12,32 @@ class MyDocument extends Document {
 					<meta name="msapplication-config" content="/browserconfig.xml" />
 					<meta name="msapplication-TileColor" content="#FFFFFF" />
 					<meta name="theme-color" content="#FFFFFF" />
+					<meta property="og:type" content="website" />
+					<meta property="og:url" content="https://tailwind-palette.vercel.app/" />
+					<meta property="og:title" content="TailwindCSS color palette viewer, click to copy class name !" />
+					<meta
+						property="og:description"
+						content="TailwindCSS Palette viewer, click to copy class name ! Full Tailwind palette (with cyan, rose, emerald)"
+					/>
+					<meta property="og:image" content="https://tailwind-palette.vercel.app/og-image.png"></meta>
 					<link rel="preconnect" href="https://fonts.gstatic.com" />
 					<link rel="canonical" href="https://tailwind-palette.vercel.app/" />
+					{/* <meta name="Publisher" content="Mattèo Gauthier"/> */}
+					<meta name="author" content="Mattèo Gauthier" />
+
 					<meta property="twitter:card" content="summary_large_image" />
 					<meta property="twitter:url" content="https://tailwind-palette.vercel.app/" />
 					<meta
 						property="twitter:title"
 						content="TailwindCSS Palette viewer, click to copy class name ! Full Tailwind palette (with cyan, rose, emerald)"
 					/>
+					<meta property="twitter:site" content="@MatteoGauthier_" />
+					<meta property="twitter:creator" content="@MatteoGauthier_" />
 					<meta
-						property="twitter:site"
-						content="@MatteoGauthier_"
-					/>
-					<meta
-						property="twitter:creator"
-						content="@MatteoGauthier_"
-					/>
-					<meta
-					name="description"
+						name="description"
 						content="TailwindCSS Palette viewer, click to copy class name ! Full Tailwind palette (with cyan, rose, emerald)"
 					/>
-                    <meta
+					<meta
 						property="description"
 						content="TailwindCSS Palette viewer, click to copy class name ! Full Tailwind palette (with cyan, rose, emerald)"
 					/>
@@ -66,7 +71,6 @@ class MyDocument extends Document {
     `,
 						}}
 					></script>
-
 				</Head>
 				<body className="transition-colors duration-200 bg-white dark:bg-black">
 					<Main />
