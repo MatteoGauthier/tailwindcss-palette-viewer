@@ -19,7 +19,7 @@ const notify = (text) =>
 
 export default function Home() {
 	function copyToClipboard(text) {
-		// copy(text);
+		copy(text);
 		notify(text);
 	}
 	return (
@@ -31,21 +31,21 @@ export default function Home() {
 			</Head>
 			<Toaster />
 			<div className="p-6">
-				<header className="flex justify-between mb-7 cetner items-center">
-					<div className="flex items-end  space-x-2">
-						<h1 className="text-3xl font-bold dark:text-white tracking-tight text-cool-gray-900 ">
+				<header className="flex items-center justify-between mb-7 cetner">
+					<div className="flex flex-col items-start space-x-0 xl:flex-row xl:items-end xl:space-x-2">
+						<h1 className="text-3xl font-bold tracking-tight dark:text-white text-cool-gray-900 ">
 							TailwindCSS full palette{" "}
 						</h1>
 						<p className="text-gray-400">Click to copy the css class ✨</p>
 					</div>
 					<a href="https://github.com/MatteoGauthier/full-palette">
-						<code className="text-sm bg-gray-100 px-2 py-1 rounded-md text-gray-800">full-palette@1.2.0</code>
+						<code className="px-2 py-1 text-sm text-gray-800 bg-gray-100 rounded-md">full-palette@1.2.0</code>
 					</a>
 				</header>
-				<main className="grid grid-cols-22 gap-x-2">
+				<main className="grid grid-cols-11 md:grid-cols-22 gap-x-1 md:gap-x-2">
 					{colors.map((group, idx) => {
 						return (
-							<div key={idx} className="flex w-full space-y-2 flex-col">
+							<div key={idx} className="flex flex-col w-full space-y-1 md:space-y-2">
 								{colors[idx].map((color, i) => {
 									return (
 										<m.div
@@ -63,7 +63,7 @@ export default function Home() {
 											aria-label={color}
 											tabIndex={0}
 											className={clsx(
-												"aspect-w-1 focus:ring-2 focus:ring-rose-400 focus:outline-none  rounded aspect-h-1 transform-gpu hover:scale-125 transition-transform ease-in-out cursor-pointer  w-full",
+												"aspect-w-1 focus:ring-2 focus:outline-none rounded aspect-h-1 transform-gpu hover:scale-125 transition-transform ease-in-out cursor-pointer w-full",
 												color
 											)}
 										></m.div>
@@ -73,13 +73,13 @@ export default function Home() {
 						);
 					})}
 				</main>
-				<footer className="text-left my-8 text-cool-gray-500">
+				<footer className="my-8 text-left text-cool-gray-500">
 					Made with love by{" "}
-					<a className="text-cyan-500 font-medium " href="https://matteogauthier.fr">
+					<a className="font-medium text-cyan-500 " href="https://matteogauthier.fr">
 						Mattèo Gauthier
 					</a>{" "}
 					from{" "}
-					<a className="text-cyan-500  font-medium " href="https://squale.agency">
+					<a className="font-medium text-cyan-500 " href="https://squale.agency">
 						squale.agency
 					</a>
 				</footer>
