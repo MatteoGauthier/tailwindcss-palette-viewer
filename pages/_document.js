@@ -64,7 +64,7 @@ class MyDocument extends Document {
 							{
 							  "@context": "https://schema.org/",
 							  "@type": "WebSite",
-							  "name": "Bookmarks",
+							  "name": "TailwindCSS Palette",
 							  "url": "https://tailwind-palette.vercel.app/"
 				
 							}
