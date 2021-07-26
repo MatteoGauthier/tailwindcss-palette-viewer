@@ -2,8 +2,12 @@ import Head from "next/head";
 import colors from "../libs/colors";
 import clsx from "clsx";
 import copy from "copy-text-to-clipboard";
+import path from "path";
 import toast, { Toaster } from "react-hot-toast";
 import { m } from "framer-motion";
+import { MDXRemote } from "next-mdx-remote";
+import { serialize } from "next-mdx-remote/serialize";
+import fs from "fs";
 
 const notify = (text) =>
 	toast(
@@ -17,7 +21,7 @@ const notify = (text) =>
 		}
 	);
 
-export default function Home() {
+export default function Home({ source }) {
 	function copyToClipboard(text) {
 		copy(text);
 		notify(text);
@@ -25,9 +29,7 @@ export default function Home() {
 	return (
 		<>
 			<Head>
-				<title>
-					TailwindCSS color palette viewer, click to copy class name !
-				</title>
+				<title>TailwindCSS color palette viewer, click to copy class name !</title>
 			</Head>
 			<Toaster />
 			<div className="p-6">
@@ -42,36 +44,42 @@ export default function Home() {
 						<code className="px-2 py-1 text-sm text-gray-800 bg-gray-100 rounded-md">full-palette@1.2.0</code>
 					</a>
 				</header>
-				<main className="grid grid-cols-11 md:grid-cols-22 gap-x-1 md:gap-x-2">
-					{colors.map((group, idx) => {
-						return (
-							<div key={idx} className="flex flex-col w-full space-y-1 md:space-y-2">
-								{colors[idx].map((color, i) => {
-									return (
-										<m.div
-											key={color}
-											onClick={() => copyToClipboard(color)}
-											initial={{ scale: 0 }}
-											animate={{ scale: 1 }}
-											transition={{
-												type: "spring",
-												stiffness: 400,
-												damping: 30,
-												mass: 1.5,
-												delay: Math.random(),
-											}}
-											aria-label={color}
-											tabIndex={0}
-											className={clsx(
-												"aspect-w-1 focus:ring-2 focus:outline-none rounded aspect-h-1 transform-gpu hover:scale-125 transition-transform ease-in-out cursor-pointer w-full",
-												color
-											)}
-										></m.div>
-									);
-								})}
-							</div>
-						);
-					})}
+				<main>
+					<article className="grid grid-cols-11 md:grid-cols-22 gap-x-1 md:gap-x-2">
+						{colors.map((group, idx) => {
+							return (
+								<div key={idx} className="flex flex-col w-full space-y-1 md:space-y-2">
+									{colors[idx].map((color, i) => {
+										return (
+											<m.div
+												key={color}
+												onClick={() => copyToClipboard(color)}
+												initial={{ scale: 0 }}
+												animate={{ scale: 1 }}
+												transition={{
+													type: "spring",
+													stiffness: 400,
+													damping: 30,
+													mass: 1.5,
+													delay: Math.random(),
+												}}
+												aria-label={color}
+												tabIndex={0}
+												className={clsx(
+													"aspect-w-1 focus:ring-2 focus:outline-none rounded aspect-h-1 transform-gpu hover:scale-125 transition-transform ease-in-out cursor-pointer w-full",
+													color
+												)}
+											></m.div>
+										);
+									})}
+								</div>
+							);
+						})}
+					</article>
+          <hr className="w-full mt-12 mb-8 border-t border-gray-300" />
+					<article className="prose md:w-1/2 ">
+						<MDXRemote {...source} />
+					</article>
 				</main>
 				<footer className="my-8 text-left text-cool-gray-500">
 					Made with love by{" "}
@@ -87,3 +95,15 @@ export default function Home() {
 		</>
 	);
 }
+export const getStaticProps = async ({ params }) => {
+	const postFilePath = path.join(process.cwd(), "public/docs.md");
+	const source = fs.readFileSync(postFilePath);
+
+	const mdxSource = await serialize(source);
+
+	return {
+		props: {
+			source: mdxSource,
+		},
+	};
+};
