@@ -14,7 +14,7 @@ class MyDocument extends Document {
 					<meta name="theme-color" content="#FFFFFF" />
 					<link rel="preconnect" href="https://fonts.gstatic.com" />
 					<link rel="canonical" href="https://tailwind-palette.vercel.app/" />
-					<meta property="twitter:card" content="summary" />
+					<meta property="twitter:card" content="summary_large_image" />
 					<meta property="twitter:url" content="https://tailwind-palette.vercel.app/" />
 					<meta
 						property="twitter:title"
