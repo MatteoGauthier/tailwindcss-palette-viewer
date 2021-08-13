@@ -46,14 +46,14 @@ class MyDocument extends Document {
 						name="keywords"
 						content="tailwind, css, tailwindcss, Mattèo Gauthier, Candice Fradet, squale.agency, dev, nodejs, postcss"
 					/>
-					<script async src="https://www.googletagmanager.com/gtag/js?id=G-8KCQN96PC6"></script>
+					<script async src="https://www.googletagmanager.com/gtag/js?id=G-LT54RS6BQT"></script>
 					<script
 						dangerouslySetInnerHTML={{
 							__html: ` window.dataLayer = window.dataLayer || [];
               function gtag(){dataLayer.push(arguments);}
               gtag('js', new Date());
             
-              gtag('config', 'G-8KCQN96PC6');`,
+              gtag('config', 'G-LT54RS6BQT');`,
 						}}
 					/>
 					<script
