@@ -1,4 +1,4 @@
-import Document, { Html, Head, Main, NextScript } from "next/document";
+import Document, { Html, Head, Main, NextScript } from "next/document"
 
 class MyDocument extends Document {
 	render() {
@@ -13,20 +13,20 @@ class MyDocument extends Document {
 					<meta name="msapplication-TileColor" content="#FFFFFF" />
 					<meta name="theme-color" content="#FFFFFF" />
 					<meta property="og:type" content="website" />
-					<meta property="og:url" content="https://tailwind-palette.vercel.app/" />
+					<meta property="og:url" content="https://full-palette.vercel.app/" />
 					<meta property="og:title" content="TailwindCSS color palette viewer, click to copy class name !" />
 					<meta
 						property="og:description"
 						content="TailwindCSS Palette viewer, click to copy class name ! Full Tailwind palette (with cyan, rose, emerald)"
 					/>
-					<meta property="og:image" content="https://tailwind-palette.vercel.app/og-image.png"></meta>
+					<meta property="og:image" content="https://full-palette.vercel.app/og-image.png"></meta>
 					<link rel="preconnect" href="https://fonts.gstatic.com" />
-					<link rel="canonical" href="https://tailwind-palette.vercel.app/" />
+					<link rel="canonical" href="https://full-palette.vercel.app/" />
 					{/* <meta name="Publisher" content="Mattèo Gauthier"/> */}
 					<meta name="author" content="Mattèo Gauthier" />
 
 					<meta property="twitter:card" content="summary_large_image" />
-					<meta property="twitter:url" content="https://tailwind-palette.vercel.app/" />
+					<meta property="twitter:url" content="https://full-palette.vercel.app/" />
 					<meta
 						property="twitter:title"
 						content="TailwindCSS Palette viewer, click to copy class name ! Full Tailwind palette (with cyan, rose, emerald)"
@@ -41,7 +41,7 @@ class MyDocument extends Document {
 						property="description"
 						content="TailwindCSS Palette viewer, click to copy class name ! Full Tailwind palette (with cyan, rose, emerald)"
 					/>
-					<meta property="twitter:image" content="https://tailwind-palette.vercel.app/og-image.png" />
+					<meta property="twitter:image" content="https://full-palette.vercel.app/og-image.png" />
 					<meta
 						name="keywords"
 						content="tailwind, css, tailwindcss, Mattèo Gauthier, Candice Fradet, squale.agency, dev, nodejs, postcss"
@@ -64,8 +64,8 @@ class MyDocument extends Document {
 							{
 							  "@context": "https://schema.org/",
 							  "@type": "WebSite",
-							  "name": "TailwindCSS Palette",
-							  "url": "https://tailwind-palette.vercel.app/"
+							  "name": "TailwindCSS Full Palette",
+							  "url": "https://full-palette.vercel.app/"
 				
 							}
     `,
@@ -77,8 +77,8 @@ class MyDocument extends Document {
 					<NextScript />
 				</body>
 			</Html>
-		);
+		)
 	}
 }
 
-export default MyDocument;
+export default MyDocument

@@ -14,7 +14,7 @@
         }
     ],
     "theme_color": "#FFFFFF",
-    "start_url": "https://tailwind-palette.vercel.app/",
+    "start_url": "https://full-palette.vercel.app/",
     "background_color": "#FFFFFF",
     "display": "standalone"
 }
