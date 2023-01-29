@@ -72,7 +72,7 @@ class MyDocument extends Document {
 						}}
 					></script>
 				</Head>
-				<body className="transition-colors duration-200 bg-white dark:bg-black">
+				<body className="transition-colors duration-200 bg-white">
 					<Main />
 					<NextScript />
 				</body>
